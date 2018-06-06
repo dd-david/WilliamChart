@@ -16,6 +16,7 @@ android {
         applicationId "com.db.williamchartdemo"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
+    /*
     signingConfigs {
         release {
             storeFile file(properties.getProperty("apk.storeFile"))
@@ -24,11 +25,12 @@ android {
             keyPassword properties.getProperty("apk.keyPassword")
         }
     }
+    */
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-            signingConfig signingConfigs.release
+            // signingConfig signingConfigs.release
         }
     }
 }
@@ -43,9 +45,10 @@ dependencies {
     androidTestCompile "com.android.support.test.espresso:espresso-core:$rootProject.espressoVersion"
     androidTestCompile "com.android.support.test:runner:$rootProject.runnerVersion"
 }
-
+/*
 play {
     serviceAccountEmail = properties.getProperty("play.accountEmail")
     pk12File = file(properties.getProperty("play.p12"))
     track = 'alpha'
 }
+*/

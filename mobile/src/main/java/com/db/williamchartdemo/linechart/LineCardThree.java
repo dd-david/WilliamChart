@@ -9,6 +9,7 @@ import com.db.chart.model.LineSet;
 import com.db.chart.view.LineChartView;
 import com.db.williamchartdemo.CardController;
 import com.db.williamchartdemo.R;
+import com.db.williamchartdemo.data.DataGenerator;
 
 
 public class LineCardThree extends CardController {
@@ -16,10 +17,13 @@ public class LineCardThree extends CardController {
 
     private final LineChartView mChart;
 
-    private final String[] mLabels = {"", "", "", "", "", "", "", "", ""};
+    private String[] mLabels = {"", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", ""};
 
-    private final float[][] mValues = {{0f, 2f, 1.4f, 4.f, 3.5f, 4.3f, 2f, 4f, 6.f},
-            {1.5f, 2.5f, 1.5f, 5f, 4f, 5f, 4.3f, 2.1f, 1.4f}};
+    private float[][] mValues = {
+            {0f, 0.1f, 0.3f, 0.7f, 2f, 4f, 6f, 8f, 9f, 10f, 10.5f, 11f, 10.5f, 10f, 9f, 8f, 6f, 4f, 2f, 0.7f, 0.3f, 0.1f, 0f},
+            //{0f, 2f, 1.4f, 4.f, 3.5f, 4.3f, 2f, 4f, 6.f},
+            //{1.5f, 2.5f, 1.5f, 5f, 4f, 5f, 4.3f, 2.1f, 1.4f}
+    };
 
 
     public LineCardThree(CardView card, Context context) {
@@ -35,7 +39,10 @@ public class LineCardThree extends CardController {
 
         super.show(action);
 
-        LineSet dataset = new LineSet(mLabels, mValues[0]);
+        mLabels = DataGenerator.labels(100);
+        float[] values = DataGenerator.randomGaussianData(100);
+
+        LineSet dataset = new LineSet(mLabels, values);
         dataset.setColor(Color.parseColor("#53c1bd"))
                 .setFill(Color.parseColor("#3d6c73"))
                 .setGradientFill(new int[]{Color.parseColor("#364d5a"), Color.parseColor("#3f7178")},
