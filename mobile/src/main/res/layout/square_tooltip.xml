@@ -2,8 +2,7 @@
 <ImageView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/round_bck"
-    android:padding="2dp"
-    android:src="@drawable/ic_grade"></ImageView>
-
+    android:background="@drawable/ic_launcher"
+    android:padding="2dp"></ImageView>
+    <!-- android:src="@drawable/ic_grade" -->
 

@@ -95,7 +95,7 @@ public class BarCardOne extends CardController {
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.ICE_CREAM_SANDWICH) {
 
-            tip.setEnterAnimation(PropertyValuesHolder.ofFloat(View.ALPHA, 1),
+            tip.setEnterAnimation(PropertyValuesHolder.ofFloat(View.ALPHA, 1f),
                     PropertyValuesHolder.ofFloat(View.SCALE_X, 1f),
                     PropertyValuesHolder.ofFloat(View.SCALE_Y, 1f)).setDuration(200);
 

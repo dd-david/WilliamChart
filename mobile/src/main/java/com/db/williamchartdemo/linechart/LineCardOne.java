@@ -73,7 +73,7 @@ public class LineCardOne extends CardController {
                     PropertyValuesHolder.ofFloat(View.SCALE_X, 0f)).setDuration(200);
 
             mTip.setPivotX(Tools.fromDpToPx(65) / 2);
-            mTip.setPivotY(Tools.fromDpToPx(25));
+            mTip.setPivotY(Tools.fromDpToPx(100));
         }
 
         // Data
